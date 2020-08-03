@@ -1,0 +1,62 @@
+﻿<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<style>
+input[type="submit"] {
+    background-color: #fff;
+    border: 2px solid #ecf0f1;
+    cursor: pointer;
+    color: #f59300;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+body {
+    background: linear-gradient(to bottom, #aff2ff 0%, #aff2ff 50%, #50dcff 50%, #50dcff 100%);
+    font-family: 'Muli', sans-serif;
+    margin: 2% 0;
+}
+.login {
+  margin: auto;
+  position: relative;
+  text-align: center;
+  top: 30%;
+  width: 30%;
+}
+input[type=text], input[type=password] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+img {
+  width: 40%;
+  border-radius: 15%;
+  }
+</style>
+<head>
+    <title>Sign in</title>
+
+</head>
+<body>
+<div class="login">
+    <br/>
+    <h2>Конвертер валют</h2>
+    <form th:action="@{/login}" method="post">
+        <label>
+            Логин <br/>
+            <input type="text" name="username" value="admin">
+        </label>
+        <br/>
+        <label>
+            Пароль<br/>
+            <input type="password" name="password" value="root">
+        </label>
+        <br/><br/>
+        <input type="submit" value="Войти">
+    </form>
+
+</div>
+</body>
+</html>

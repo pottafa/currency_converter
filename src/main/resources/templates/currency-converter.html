@@ -1,0 +1,91 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Конвертер валют</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1000, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="converter.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script charset="utf-8" src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+  </head>
+  <body>
+  <div class="converter">
+<h1>Конвертер валют</h1>
+
+<br class="container">
+  <div class="currency">
+    <select class="currencies" id="from_currency">
+
+    </select>
+    <input type="number" id="from_ammount" placeholder="0" value=1 />
+  </div>
+  <div class="middle">
+    <button class="exchange" id="exchange">
+      <i class="fas fa-exchange-alt"></i>
+    </button>
+    <button id="convert" class="convert"><span>Конвертировать</span></button>
+  </div>
+  <div class="currency">
+    <select class="currencies" id="to_currency">
+
+    </select>
+    <input type="number" id="to_ammount" placeholder="0" />
+  </div>
+  </div>
+
+<div class="history">
+<h2>История</h2>
+  <div class="params">
+
+    <div class="input-daterange">
+      <div class="small-9 columns">
+        <input type="text" placeholder="Выберите дату" name="date" id="date" class="small-9 columns" />
+      </div>
+    </div>
+    <div class="currency-from" >
+      <select class="currencies" id="from_currency_history"></select>
+    </div>
+    <div class="currency-to" >
+      <select class="currencies" id="to_currency_history"></select>
+    </div>
+    <div class="search">
+      <input type="button" name="search" id="search" value="Поиск"  />
+    </div>
+  </div>
+
+  <table class="table table-bordered table-striped" id="conversion_history">
+    <thead>
+    <tr>
+      <th>Исходная валюта</th>
+      <th>Целевая валюта</th>
+      <th>Исходная сумма</th>
+      <th>Получаемая сумма</th>
+      <th>Дата</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+</div>
+
+
+<script  src="converter.js"></script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
